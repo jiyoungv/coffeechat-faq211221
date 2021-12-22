@@ -1,73 +1,42 @@
 import React, { useState } from 'react';
-import { Inners } from '../../styles/Common';
 import { Faqs } from './Style';
+import FaqNav from '../FaqNav';
+import FaqContent from '../FaqContent';
 
 function Faq () {
-    const [depth1, setDepth1] = useState(0);
-    const [depth2, setDepth2] = useState(0);
+    const [selectDepth1, setSelectDepth1] = useState(0);
+    const [openDepth1, setOpenDepth1] = useState(false);
+    const [selectDepth2, setSelectDepth2] = useState(0);
+    const [openDepth2, setOpenDepth2] = useState(false);
 
     return (
         <Faqs>
-            <nav className="faq-nav">
-                <Inners>
-                    <ul className="faq-depth1-list faq-nav-list">
-                        <li className="faq-nav-item active"><a href="#faq-intro"><b>커피챗 소개</b></a></li>
-                        <li className="faq-nav-item"><a href="#faq-howto"><b>커피챗 이용 방법</b></a></li>
-                    </ul>
-                </Inners>
-            </nav>
-            <article className="faq-content">
-                <ul className="faq-depth1-list faq-content-list">
-                    <li className="faq-content-item active">
-                        <span id="faq-intro" className="faq-link"></span>
-                        <Inners>
-                            <button type="button" className="faq-depth1-title"><b>커피챗 소개</b></button>
-                        </Inners>
-                        <ul className="faq-depth2-list">
-                            <li className="faq-depth2-item active">
-                                <Inners>
-                                    <button type="button" className="faq-depth2-question">커피챗은 어떤 서비스인가요?</button>
-                                    <div className="faq-depth2-answer">
-                                        <p>텍스트1</p>
-                                    </div>
-                                </Inners>
-                            </li>
-                            <li className="faq-depth2-item">
-                                <Inners>
-                                    <button type="button" className="faq-depth2-question">질문1</button>
-                                    <div className="faq-depth2-answer">
-                                        <p>텍스트2</p>
-                                    </div>
-                                </Inners>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="faq-content-item">
-                        <span id="faq-howto" className="faq-link"></span>
-                        <Inners>
-                            <button type="button" className="faq-depth1-title"><b>커피챗 이용 방법</b></button>
-                        </Inners>
-                        <ul className="faq-depth2-list">
-                            <li className="faq-depth2-item active">
-                                <Inners>
-                                    <button type="button" className="faq-depth2-question">질문2</button>
-                                    <div className="faq-depth2-answer">
-                                        <p>텍스트3</p>
-                                    </div>
-                                </Inners>
-                            </li>
-                            <li className="faq-depth2-item">
-                                <Inners>
-                                    <button type="button" className="faq-depth2-question">질문3</button>
-                                    <div className="faq-depth2-answer">
-                                        <p>텍스트4</p>
-                                    </div>
-                                </Inners>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </article>            
+            <div>
+            selectDepth1: {selectDepth1}<br/>
+            openDepth1: {openDepth1 ? 'true' : 'false'}<br/>
+            selectDepth2: {selectDepth2}<br/>
+            openDepth2: {openDepth2 ? 'true' : 'false'}<br/>
+            </div>
+            <FaqNav 
+                selectDepth1={selectDepth1}
+                setSelectDepth1={setSelectDepth1}
+                openDepth1={openDepth1}
+                setOpenDepth1={setOpenDepth1}
+                selectDepth2={selectDepth2}
+                setSelectDepth2={setSelectDepth2}
+                openDepth2={openDepth2}
+                setOpenDepth2={setOpenDepth2}
+            />
+            <FaqContent 
+                selectDepth1={selectDepth1}
+                setSelectDepth1={setSelectDepth1}
+                openDepth1={openDepth1}
+                setOpenDepth1={setOpenDepth1}
+                selectDepth2={selectDepth2}
+                setSelectDepth2={setSelectDepth2}
+                openDepth2={openDepth2}
+                setOpenDepth2={setOpenDepth2}
+            />
         </Faqs>
     );
 }

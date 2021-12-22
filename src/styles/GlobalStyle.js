@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
-	#root {
-		overflow-x: hidden;
+	html {
+		scroll-behavior: smooth;
 	}
-
+	
 	body {
 		font-size: 16px;
 		font-family: ${notoSans}, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -73,6 +73,11 @@ const GlobalStyle = createGlobalStyle`
 	
 	img {
 		max-width: 100%;
+	}
+
+	#root {
+		overflow-x: hidden;
+		
 	}
 `;
 
