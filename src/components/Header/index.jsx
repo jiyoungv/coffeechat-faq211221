@@ -4,7 +4,7 @@ import { Headers } from './Style';
 import img_cc_logotype from '../../assets/images/img_cc_logotype.svg';
 import img_cc_logotype_brand from '../../assets/images/img_cc_logotype_brand.svg';
 
-function Header () {
+const Header = () => {
     const [scrollY, setScrollY] = useState(0);
 
     const handleNavigation = (e) => {
@@ -26,6 +26,6 @@ function Header () {
             </Inners>
         </Headers>
     );
-}
+};
 
 export default Header;

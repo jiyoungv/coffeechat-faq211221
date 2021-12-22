@@ -1,45 +1,273 @@
 import shortid from 'shortid';
 
 const faqData = [
-    {
-        id: shortid.generate(),
-        title: '커피챗 가격은 어떻게 되나요?',
-        description: [
-            '1:1 익명 & 음성 대화 커피챗은 1회(20분) 14,900원 입니다.',
+    { 
+        id: shortid.generate(), 
+        href: 'intro', 
+        title: '커피챗 소개',
+        list: [
+            {
+                question: '커피챗은 어떤 서비스인가요?',
+                answer: '<a href="123">123123</a>',
+            },
+            {
+                question: '커피챗은 어떤 목적으로 이용하나요?',
+                answer: '<a href="123">456456</a>',
+            },
+            {
+                question: '커피챗은 무슨 뜻인가요?',
+                answer: '',
+            },                        
+        ],         
+    },
+    { 
+        id: shortid.generate(), 
+        href: 'how-to', 
+        title: '커피챗 이용 방법',
+        list: [
+            {
+                question: '커피챗 이용 프로세스가 궁금해요!',
+                answer: '',
+            },
+            {
+                question: '예약 확정은 어떻게 알 수 있나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗은 어떻게 진행되나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗 가격은 얼마인가요?',
+                answer: '',
+            },
+            {
+                question: '커피챗 파트너들은 어떤 사람인가요?',
+                answer: '',
+            },
+            {
+                question: '리스트에 개별문의로 안내된 파트너는 어떤 파트너인가요?',
+                answer: '',
+            },
+            {
+                question: '저도 커피챗 파트너가 될 수 있나요?',
+                answer: '',
+            },
+        ],         
+    },
+    { 
+        id: shortid.generate(), 
+        href: 'request', 
+        title: '커피챗 신청 시',
+        list: [
+            {
+                question: '커피챗은 신청은 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗 신청 시 내 정보는 어디까지 보호되나요?',
+                answer: '',
+            },
+            {
+                question: '사전 질문 작성은 필수인가요?',
+                answer: '',
+            },
+            {
+                question: '신청 후 사전 질문 수정이 가능한가요?',
+                answer: '',
+            },
+            {
+                question: '당일로 예약은 어려운가요?',
+                answer: '',
+            },
         ],
     },
-    {
-        id: shortid.generate(),
-        title: '커피챗 신청 시 내 정보는 어디까지 공개되나요?',
-        description: [
-            '커피챗은 신청자의 회사 또는 학교 정보를 포함한 개인 정보를 철저히 비공개로 보호하고 있습니다. 파트너는 오직 신청자의 닉네임과 직무/연차 범위 (학생인 경우 전공/학년)만 확인할 수 있으며 사전 질문 기반으로 대화합니다.',
-            '신상 문의 및 개인 정보 교류는 엄격히 금지하고 있습니다.',
+    { 
+        id: shortid.generate(), 
+        href: 'reservation', 
+        title: '커피챗 신청(예약) 후',
+        list: [
+            {
+                question: '신청 이후의 프로세스가 궁금해요!',
+                answer: '',
+            },
+            {
+                question: '신청 취소는 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '파트너가 거절할 수도 있나요?',
+                answer: '',
+            },
+            {
+                question: '예약된 시간은 한국시간 기준인가요?',
+                answer: '',
+            },
+            {
+                question: '예약 확정 후 취소는 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '예약 확정 후 일정 변경은 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '해외 거주자는 어떻게 알림을 받나요?',
+                answer: '',
+            },
         ],
     },
-    {
-        id: shortid.generate(),
-        title: '커피챗 파트너는 어떤 사람들인가요?',
-        description: [
-            '커피챗 파트너는 재직 중 회사 또는 재학/졸업 학교의 공식 메일 계정 시스템 인증을 마치고, 증명서 제출을 통해 커피챗 인증 위원회의 2차 검증까지 모두 통과한 분들입니다. 커피챗은 정보와 경험의 신뢰도를 가장 중요하게 생각합니다.',
-        ],
-    },    
-    {
-        id: shortid.generate(),
-        title: '파트너 리스트에 원하는 파트너가 없어요. 어떻게 하나요?',
-        description: [
-            `피챗 메인 홈 화면에서 꼭 맞는 '파트너 추천받기'를 클릭하고, 나의 고민과 궁금한 업계/회사 등을 남겨주세요.`,
-            '파트너 추천/섭외 신청 접수가 완료되면 팀 커피챗이 확인 후 빠른 시일 내에 개별 안내드립니다.',
+    { 
+        id: shortid.generate(), 
+        href: 'progress', 
+        title: '커피챗 진행 시',
+        list: [
+            {
+                question: '커피챗 입장은 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗 입장 제한 시간이 있나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗이 취소 되었어요!',
+                answer: '',
+            },
+            {
+                question: '커피챗 진행 중에 상대방이 나갔어요!',
+                answer: '',
+            },
+            {
+                question: 'VPN 비활성화가 필요한가요?',
+                answer: '',
+            },
+            {
+                question: '앱이 갑자기 멈춘 것 같아요!',
+                answer: '',
+            },
+            {
+                question: '상대방의 소리가 들리지 않아요!',
+                answer: '',
+            },
+            {
+                question: '20분이 되면 자동으로 종료되나요?',
+                answer: '',
+            },
+            {
+                question: '커피챗 진행 시 주의할 점이 있나요?',
+                answer: '',
+            },
         ],
     },
-    {
-        id: shortid.generate(),
-        title: '커피챗을 이미 한 번 진행했는데 동일한 파트너와 또 해보고 싶어요.',
-        description: [
-            `환영입니다! 언제든 원할 때 어떤 파트너에게든 커피챗을 신청할 수 있으며, 나의 커리어를 위한 지속적인 '탐색'의 일환으로 커피챗 서비스를 이용할 수 있어요.`, 
-            '한 번 대화를 진행했던 파트너 혹은 새로운 파트너에게 커피챗 신청하기를 통해 대화를 이어나갈 수 있습니다.',
+    { 
+        id: shortid.generate(), 
+        href: 'end', 
+        title: '커피챗 종료 후',
+        list: [
+            {
+                question: '파트너에게 인사는 어떻게 남길 수 있나요?',
+                answer: '',
+            },
+            {
+                question: '파트너를 평가하고 싶어요!',
+                answer: '',
+            },
         ],
     },
-
+    { 
+        id: shortid.generate(), 
+        href: 'partner', 
+        title: '파트너 이용 방법',
+        list: [
+            {
+                question: '파트너 신청은 어떻게 하나요?',
+                answer: '',
+            },
+            {
+                question: '파트너의 정보는 어디까지 보호되나요?',
+                answer: '',
+            },
+            {
+                question: '파트너가 되면 무엇이 좋은가요?',
+                answer: '',
+            },
+            {
+                question: '파트너 신청 자격은 어떻게 되나요?',
+                answer: '',
+            },
+            {
+                question: '파트너 인증 메일이 오지 않아요!',
+                answer: '',
+            },
+            {
+                question: '파트너로 참여를 잠시 쉬어갈 수 있나요?',
+                answer: '',
+            },
+            {
+                question: '이직 등으로 회사/직무 업데이트가 필요해요!',
+                answer: '',
+            },
+            {
+                question: '파트너 리스트에서 사라졌어요!',
+                answer: '',
+            },
+            {
+                question: '리워드 정보 변경이 필요해요!',
+                answer: '',
+            },
+        ],
+    },
+    { 
+        id: shortid.generate(), 
+        href: 'member', 
+        title: '회원 가입 및 정보 변경',
+        list: [
+            {
+                question: '가입 시 인증 문자가 오지 않아요!',
+                answer: '',
+            },
+            {
+                question: '비밀번호 설정 시 특수문자는 어디까지 허용되나요?',
+                answer: '',
+            },
+            {
+                question: '회원 정보 변경이 필요해요!',
+                answer: '',
+            },
+            {
+                question: '비밀번호가 기억나지 않아요!',
+                answer: '',
+            },
+            {
+                question: '회원 탈퇴는 어디서 하나요?',
+                answer: '',
+            },
+        ],
+    },
+    { 
+        id: shortid.generate(), 
+        href: 'pay', 
+        title: '결제',
+        list: [
+            {
+                question: '커피챗 신청 후 입금 안내가 오지 않아요!',
+                answer: '',
+            },
+            {
+                question: '커피챗 입금 후 언제 매칭이 되나요?',
+                answer: '',
+            },
+            {
+                question: '파트너가 거절하면 환급이 되나요?',
+                answer: '',
+            },
+            {
+                question: '쿠폰 코드는 어디에 입력하나요?',  
+                answer: '',
+            },
+        ],
+    },
 ];
 
 export default faqData;

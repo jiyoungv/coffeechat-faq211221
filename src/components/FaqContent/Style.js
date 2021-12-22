@@ -11,6 +11,7 @@ export const FaqContents = styled.article`
     }
 
     .faq-content-item {
+        position: relative;
 
         &.open {
             .faq-depth1-title {
@@ -25,6 +26,16 @@ export const FaqContents = styled.article`
                 padding: 20px 0;
             }
         }
+    }
+
+    .faq-link {
+        position: absolute;
+        left: 0;
+        top: -72px;
+        display: block;
+        width: 10px;
+        height: 2px;
+        background: red;
     }
 
     .faq-depth1-title {
@@ -109,10 +120,6 @@ export const FaqContents = styled.article`
         max-height: 0;
         color: ${midnight500};
         transition: all 0.3s;
-    }
-
-    .faq-link {
-
     }
 
     ${mediaTablet} {
