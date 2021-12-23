@@ -15,6 +15,7 @@ export const Inners = styled.div`
 
     ${mediaTablet} {
         margin: 0 48px;
+        ${props => props.tablet && "max-width: 680px;margin: 0 auto;"}
     }
 
     ${mediaMobile} {

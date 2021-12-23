@@ -17,7 +17,7 @@ const FaqTab = ({ selectDepth1, setSelectDepth1, setSelectDepth2, setOpenDepth1,
 
     return (
         <FaqTabs>
-            <Inners>
+            <Inners tablet>
                 <ul className="faq-depth1-list faq-tab-list">
                     {faqData.map((data, index) => {
                         return (

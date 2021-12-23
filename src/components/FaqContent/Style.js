@@ -22,24 +22,14 @@ export const FaqContents = styled.article`
 
             .faq-depth2-list {
                 overflow: visible;
-                max-height: 100vh;
-                padding: 20px 0;
+                height: auto;
             }
         }
     }
 
-    .faq-link {
-        position: absolute;
-        left: 0;
-        top: -72px;
-        display: block;
-        width: 10px;
-        height: 2px;
-        background: red;
-    }
-
     .faq-depth1-title {
         position: relative;
+        display: block;
         width: 100%;
         padding: 21.5px 0;
         padding-right: 72px;
@@ -73,16 +63,12 @@ export const FaqContents = styled.article`
 
     .faq-depth2-list {
         overflow: hidden;
-        max-height: 0;
-        transition: all 0.3s;
+        height: 0;
+        transition: height 0.3s ease-in-out;
     }
 
     .faq-depth2-item {
-        margin-bottom: 20px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        padding: 20px 0;
 
         &.open {
             background: #fafafa;
@@ -94,7 +80,7 @@ export const FaqContents = styled.article`
 
             .faq-depth2-answer {
                 overflow: visible;
-                max-height: 100vh;
+                height: auto;
                 padding-top: 20px;
             }
         }
@@ -117,14 +103,36 @@ export const FaqContents = styled.article`
 
     .faq-depth2-answer {
         overflow: hidden;
-        max-height: 0;
+        height: 0;
         color: ${midnight500};
-        transition: all 0.3s;
+        transition: height 0.3s ease-in-out;
+
+        p {
+            color: ${midnight500};
+        }
+    }
+
+    .faq-answer-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 24px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #7E6CF5 0%, #6CA3F5 100%);
+        box-shadow: 0px 2px 16px rgba(108, 163, 245, 0.48);
+        color: #fff;
+    }
+
+    .faq-answer-link {
+        text-decoration: underline;
+        color: ${brand400};
     }
 
     ${mediaTablet} {
+        padding-top: 40px;
     }
 
     ${mediaMobile} {
+        padding-top: 20px;
+
     }
 `;

@@ -5,25 +5,21 @@ const { mediaTablet, mediaMobile } = mediaQuery;
 const { midnight400, midnight700 } = colors;
 
 export const FaqTabs = styled.nav`
-    position: absolute;
-    top: -60px;
-    left: 0;
-    transform: translateY(-100%);
-    width: 100%;
+    padding-bottom: 60px;
+    background: #F5F7FD;
 
     .faq-tab-list {
-        display: flex;
-        flex-wrap: wrap;
+        margin: 0 -15px;
+        text-align: center;
     }
 
     .faq-tab-item {
-        margin-right: 32px;
-
-        &:last-child {
-            margin-right: 0;
-        }
+        display: inline-block;
+        margin: 0 15px;
 
         > a {
+            display: inline-block;
+            padding: 5.5px 0;
             font-size: 18px;
             color: ${midnight400};
             transition: color 0.3s;
@@ -41,8 +37,28 @@ export const FaqTabs = styled.nav`
     }
 
     ${mediaTablet} {
+        .faq-tab-list {
+            margin: 0 -12px;
+        }
+
+        .faq-tab-item {
+            margin: 0 12px;
+        }
     }
 
     ${mediaMobile} {
+        padding-bottom: 30px;
+        
+        .faq-tab-list {
+            margin: 0 -12px;
+        }
+
+        .faq-tab-item {
+            margin: 0 12px;
+
+            > a {
+                font-size: 14px;
+            }
+        }
     }
 `;

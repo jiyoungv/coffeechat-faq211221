@@ -24,7 +24,12 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
     const onClickFaqDepth2 = useCallback((depth2) => () => {
         setSelectDepth2(depth2);
         setOpenDepth2(true);
-    }, [setSelectDepth2, setOpenDepth2]);
+
+        if (depth2 === selectDepth2) {
+            setSelectDepth2(0);
+            setOpenDepth2(false);
+        }
+    }, [selectDepth2, setSelectDepth2, setOpenDepth2]);
 
     return (
         <FaqContents>
@@ -32,14 +37,14 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
                 {faqData.map((data, index) => {
                     return (
                         <li 
-                            key={data.id} 
+                            key={data.id}
+                            id={data.href}
                             className={selectDepth1 === (index + 1) && openDepth1 === true 
                                 ? "faq-content-item open" 
                                 : "faq-content-item"
                             }
                         >
-                            <div id={data.href} className="faq-link"></div>
-                            <Inners>
+                            <Inners tablet>
                                 <button type="button" className="faq-depth1-title" onClick={onClickFaqDepth1(index + 1)}>
                                     <b>{data.title}</b>
                                 </button>
@@ -54,7 +59,7 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
                                                 : "faq-depth2-item"
                                             }
                                         >
-                                            <Inners>
+                                            <Inners tablet>
                                                 <button type="button" className="faq-depth2-question" onClick={onClickFaqDepth2(index2 + 1)}>{list.question}</button>
                                                 <div className="faq-depth2-answer">
                                                     {parse(list.answer)}
