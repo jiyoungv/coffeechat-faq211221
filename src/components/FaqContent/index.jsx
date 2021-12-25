@@ -38,13 +38,13 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
                     return (
                         <li 
                             key={data.id}
-                            id={data.href}
                             className={selectDepth1 === (index + 1) && openDepth1 === true 
                                 ? "faq-content-item open" 
                                 : "faq-content-item"
                             }
                         >
-                            <Inners tablet>
+                            <div id={data.href} className="faq-content-link"></div>
+                            <Inners tabletType2>
                                 <button type="button" className="faq-depth1-title" onClick={onClickFaqDepth1(index + 1)}>
                                     <b>{data.title}</b>
                                 </button>
@@ -59,7 +59,7 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
                                                 : "faq-depth2-item"
                                             }
                                         >
-                                            <Inners tablet>
+                                            <Inners tabletType2>
                                                 <button type="button" className="faq-depth2-question" onClick={onClickFaqDepth2(index2 + 1)}>{list.question}</button>
                                                 <div className="faq-depth2-answer">
                                                     {parse(list.answer)}

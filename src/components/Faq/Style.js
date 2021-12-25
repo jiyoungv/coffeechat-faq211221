@@ -7,8 +7,10 @@ export const Faqs = styled.section`
     margin-bottom: 270px;
 
     ${mediaTablet} {
+        margin-bottom: 200px;
     }
 
     ${mediaMobile} {
+        margin-bottom: 200px;
     }
 `;

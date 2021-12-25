@@ -6,7 +6,7 @@ const { notoSans } = fontFamily;
 
 const GlobalStyle = createGlobalStyle`
 	${reset}
-
+	
 	* {
 		box-sizing: border-box;
 	}
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 	html {
 		scroll-behavior: smooth;
 	}
-	
+
 	body {
 		font-size: 16px;
 		font-family: ${notoSans}, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

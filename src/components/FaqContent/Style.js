@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { mediaQuery, colors } from '../../styles/Variable';
+import { mediaQuery, colors, fontFamily } from '../../styles/Variable';
 
 const { mediaTablet, mediaMobile } = mediaQuery;
 const { brand400, slate700, midnight200, midnight500, midnight700 } = colors;
+const { gilroy } = fontFamily;
 
 export const FaqContents = styled.article`
     padding-top: 46px;
@@ -16,15 +17,24 @@ export const FaqContents = styled.article`
         &.open {
             .faq-depth1-title {
                 &::after {
-                    transform: translateY(-50%) rotate(-90deg);
+                    transform: translateY(-50%) rotate(90deg);
                 }
             }
 
             .faq-depth2-list {
                 overflow: visible;
                 height: auto;
+                padding: 20px 0;
+                margin-top: -20px;
+                transition: height 0.4s, padding 0.4s;
             }
         }
+    }
+
+    .faq-content-link {
+        position: absolute;
+        top: -72px;
+        left: 0;
     }
 
     .faq-depth1-title {
@@ -46,7 +56,7 @@ export const FaqContents = styled.article`
             transform: translateY(-50%);
             border-radius: 1px;
             background: ${midnight700};
-            transition: transform 0.3s;
+            transition: transform 0.4s;
         }
 
         &::before {
@@ -64,14 +74,19 @@ export const FaqContents = styled.article`
     .faq-depth2-list {
         overflow: hidden;
         height: 0;
-        transition: height 0.3s ease-in-out;
     }
 
     .faq-depth2-item {
-        padding: 20px 0;
+        padding-top: 20px;
 
         &.open {
+            margin-top: 20px;
             background: #fafafa;
+            transition: background 0.4s;
+
+            &:first-child {
+                margin-top: 0;
+            }
 
             .faq-depth2-question {
                 font-weight: 700;
@@ -81,7 +96,8 @@ export const FaqContents = styled.article`
             .faq-depth2-answer {
                 overflow: visible;
                 height: auto;
-                padding-top: 20px;
+                padding: 20px 0;
+                transition: height 0.4s, padding 0.4s;
             }
         }
     }
@@ -92,7 +108,9 @@ export const FaqContents = styled.article`
         color: ${midnight500};
 
         &::before {
-            content: 'Q ';
+            content: 'Q';
+            margin-right: 7px;
+            font-family: '${gilroy}';
         }
 
         &:hover {
@@ -105,7 +123,6 @@ export const FaqContents = styled.article`
         overflow: hidden;
         height: 0;
         color: ${midnight500};
-        transition: height 0.3s ease-in-out;
 
         p {
             color: ${midnight500};
@@ -129,10 +146,50 @@ export const FaqContents = styled.article`
 
     ${mediaTablet} {
         padding-top: 40px;
+
+        .faq-depth2-question {
+
+            &:hover {
+                font-weight: 400;
+                color: ${midnight500};
+            }
+        }        
     }
 
     ${mediaMobile} {
         padding-top: 20px;
+
+        .faq-content-link {
+            top: -48px;
+        }
+
+        .faq-depth1-title {
+            padding-right: 52px;
+            font-size: 16px;
+
+            &::before {
+                width: 14px;
+            }
+
+            &::after {
+                right: 20px;
+                height: 14px;
+            }
+        }
+
+        .faq-depth2-question {
+            padding: 4.5px 0;
+            font-size: 13px;
+
+            &:hover {
+                font-weight: 400;
+                color: ${midnight500};
+            }
+        }
+
+        .faq-depth2-answer {
+            font-size: 13px;
+        }
 
     }
 `;

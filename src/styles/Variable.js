@@ -1,14 +1,6 @@
 export const fontFamily = {
     notoSans: 'Noto Sans KR',
-};
-
-export const fontSizes = {
-};
-
-export const fontSizesTablet = {
-};
-
-export const fontSizesMobile = {
+    gilroy: 'Gilroy',
 };
 
 export const colors = {
@@ -32,7 +24,7 @@ export const colors = {
 
 export const breakPoints = {
     tablet: 1175, // 이하
-    mobile: 599, // 이하
+    mobile: 767, // 이하
 };
 
 export const mediaQuery = {

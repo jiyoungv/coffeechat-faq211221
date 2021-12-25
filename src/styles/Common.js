@@ -15,10 +15,15 @@ export const Inners = styled.div`
 
     ${mediaTablet} {
         margin: 0 48px;
-        ${props => props.tablet && "max-width: 680px;margin: 0 auto;"}
+        ${props => props.tabletType2 
+            && "max-width: calc(680px + 48px * 2);margin: 0 auto;padding: 0 48px;"
+        }
     }
 
     ${mediaMobile} {
         margin: 0 24px;
+        ${props => props.mobileType2 
+            && "margin: 0;"
+        }
     }
 `;
