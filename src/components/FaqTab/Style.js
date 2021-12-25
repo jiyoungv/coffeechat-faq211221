@@ -49,17 +49,17 @@ export const FaqTabs = styled.nav`
     ${mediaMobile} {
         padding-bottom: 30px;
         
-        // .faq-tab-list {
-        //     margin: 0;
+        .faq-tab-list {
+            margin: 0;
 
-        //     .swiper-slide {
-        //         width: auto;
+            .swiper-slide {
+                width: auto;
 
-        //         &:first-child {
-        //             margin-left: 24px;
-        //         }
-        //     }
-        // }
+                &:first-child {
+                    margin-left: 24px;
+                }
+            }
+        }
 
         .faq-tab-list {
             margin: 0;
@@ -75,17 +75,17 @@ export const FaqTabs = styled.nav`
         }
 
         .faq-tab-item {
-            // margin: 0;
-            // margin-right: 28px;
-            margin: 0 12px;
+            margin: 0;
+            margin-right: 28px;
+            // margin: 0 12px;
 
-            &:first-child {
-                margin-left: 24px;
-            }
+            // &:first-child {
+            //     margin-left: 24px;
+            // }
 
-            &:last-child {
-                margin-right: 24px;
-            }
+            // &:last-child {
+            //     margin-right: 24px;
+            // }
 
             > a {
                 padding: 4px 0;

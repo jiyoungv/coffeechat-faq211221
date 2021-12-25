@@ -1,21 +1,25 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import "swiper/css/free-mode";
-// import "swiper/css/pagination"
-// import SwiperCore, { FreeMode } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/free-mode";
+import "swiper/css/pagination"
+import SwiperCore, { FreeMode } from 'swiper';
 import { Inners } from '../../styles/Common';
 import { FaqTabs } from './Style';
 import faqData from '../../data/faqData';
-// import { IsMobile } from '../../utils/mediaQuery';
+import { IsMobile } from '../../utils/mediaQuery';
 
-// SwiperCore.use([FreeMode]);
+SwiperCore.use([FreeMode]);
 
 const FaqTab = ({ selectDepth1, setSelectDepth1, setSelectDepth2, setOpenDepth1, setOpenDepth2 }) => {
+    // const swiperRef = useRef();
+    // const swiperWrapper = swiperRef.current.firstChild;
     const onClickFaqTab = useCallback((number) => () => {
         setSelectDepth1(number);
         setOpenDepth1(true);
+        // swiperWrapper.style.transform = `translate3d(${number * -10}px, 0px, 0px)`;
+        // swiperWrapper.style.transitionDuration = `100ms`;
 
         if (number !== selectDepth1) {
             setSelectDepth2(0);
@@ -23,14 +27,16 @@ const FaqTab = ({ selectDepth1, setSelectDepth1, setSelectDepth2, setOpenDepth1,
         }
     }, [selectDepth1, setSelectDepth1, setSelectDepth2, setOpenDepth1, setOpenDepth2]);
 
+
     return (
         <FaqTabs>
             <Inners tabletType2 mobileType2>
-                {/* {IsMobile()
+                {IsMobile()
                     ? <Swiper
                         slidesPerView={'auto'}
                         freeMode={true}
                         className='faq-depth1-list faq-tab-list'
+                        // ref={swiperRef}
                     >                    
                         {faqData.map((data, index) => {
                             return (
@@ -55,19 +61,7 @@ const FaqTab = ({ selectDepth1, setSelectDepth1, setSelectDepth2, setOpenDepth1,
                             );
                         })}
                     </div>                    
-                } */}
-
-                <div className="faq-depth1-list faq-tab-list">
-                    {faqData.map((data, index) => {
-                        return (
-                            <div key={data.id} className={selectDepth1 === (index + 1) ? "faq-tab-item active" : "faq-tab-item"}>
-                                <a href={'#' + data.href} title={data.title} onClick={onClickFaqTab(index + 1)}>
-                                    <b>{data.title}</b>
-                                </a>
-                            </div>
-                        );
-                    })}
-                </div> 
+                }
             </Inners>
         </FaqTabs>
     );
