@@ -144,6 +144,7 @@ export const FaqContents = styled.article`
         padding-top: 40px;
 
         .faq-depth2-question {
+            height: auto;
 
             &:hover {
                 font-weight: 400;
@@ -168,19 +169,8 @@ export const FaqContents = styled.article`
             }
         }
 
-        .faq-depth2-item {
-            padding-top: 10px;
-
-            &.open {
-                margin-top: 10px;
-
-                .faq-depth2-answer {
-                    padding: 10px 0;
-                }
-            }            
-        }
-
         .faq-depth2-question {
+            height: auto;
             padding: 4.5px 0;
             font-size: 13px;
 
