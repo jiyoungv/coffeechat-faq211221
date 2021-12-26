@@ -17,7 +17,7 @@ export const FaqContents = styled.article`
         &.open {
             .faq-depth1-title {
                 &::after {
-                    transform: translateY(-50%) rotate(90deg);
+                    transform: translateY(-50%) rotate(0);
                 }
             }
 
@@ -54,20 +54,15 @@ export const FaqContents = styled.article`
             top: 50%;
             right: 14px;
             transform: translateY(-50%);
+            width: 18px;
+            height: 2px;
             border-radius: 1px;
             background: ${midnight700};
             transition: transform 0.4s;
         }
 
-        &::before {
-            width: 18px;
-            height: 2px;
-        }
-
         &::after {
-            right: 22px;
-            width: 2px;
-            height: 18px;
+            transform: translateY(-50%) rotate(-90deg);
         }
     }
 
@@ -103,6 +98,7 @@ export const FaqContents = styled.article`
     }
 
     .faq-depth2-question {
+        height: 40px;
         padding: 7px 0;
         font-weight: 400;
         color: ${midnight500};
@@ -167,14 +163,21 @@ export const FaqContents = styled.article`
             padding-right: 52px;
             font-size: 16px;
 
-            &::before {
+            &::before, &::after {
                 width: 14px;
             }
+        }
 
-            &::after {
-                right: 20px;
-                height: 14px;
-            }
+        .faq-depth2-item {
+            padding-top: 10px;
+
+            &.open {
+                margin-top: 10px;
+
+                .faq-depth2-answer {
+                    padding: 10px 0;
+                }
+            }            
         }
 
         .faq-depth2-question {

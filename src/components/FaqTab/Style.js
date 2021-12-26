@@ -56,7 +56,7 @@ export const FaqTabs = styled.nav`
                 width: auto;
 
                 &:first-child {
-                    margin-left: 24px;
+                    padding-left: 24px;
                 }
             }
         }
@@ -76,7 +76,7 @@ export const FaqTabs = styled.nav`
 
         .faq-tab-item {
             margin: 0;
-            margin-right: 28px;
+            padding-right: 28px;
             // margin: 0 12px;
 
             // &:first-child {

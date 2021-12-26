@@ -45,9 +45,9 @@ const FaqContent = ({ selectDepth1, setSelectDepth1, selectDepth2, setSelectDept
                         >
                             <div id={data.href} className="faq-content-link"></div>
                             <Inners tabletType2>
-                                <button type="button" className="faq-depth1-title" onClick={onClickFaqDepth1(index + 1)}>
+                                <a href={'#' + data.href} className="faq-depth1-title" onClick={onClickFaqDepth1(index + 1)}>
                                     <b>{data.title}</b>
-                                </button>
+                                </a>
                             </Inners>
                             <ul className="faq-depth2-list">
                                 {data.list.map((list, index2) => {

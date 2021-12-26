@@ -54,7 +54,7 @@ const faqData = [
                     <p>커피챗은 1:1 익명 기반 음성대화입니다. 커피챗 앱을 통해 목소리로 대화하며 20분간 정보와 경험을 나누게 됩니다.</p>
                     <br/>
                     <p>· 커피챗 모바일 앱에서만 대화가 가능합니다. (PC/모바일웹 미지원)</p>
-                    <p><a href="https://coffeechat.onelink.me/XgWl/70e875a1" title="커피챗 앱 다운로드" class="faq-answer-button"><b>커피챗 앱 다운로드</b></a></p>
+                    <p><a href="https://coffeechat.onelink.me/XgWl/70e875a1" title="커피챗 앱 다운로드" class="faq-answer-button" target="_blank" rel="noreferrer"><b>커피챗 앱 다운로드</b></a></p>
                 `,
             },
             {
@@ -80,7 +80,7 @@ const faqData = [
                 question: '저도 커피챗 파트너가 될 수 있나요?',
                 answer: `
                     <p>물론입니다. 누구든 필요할 때 궁금한 사람에게 커피챗을 신청할 수 있으며, 언제든 커피챗 신청을 받고 나의 정보와 경험을 나눌 수도 있습니다.</p>
-                    <p>파트너 혜택과 신청 방법이 궁금하다면 <a href="https://coffeechat.kr/partnerVP" title="파트너 시작하기" class="faq-answer-link"><b>여기</b></a>를 눌러주세요!</p>
+                    <p>파트너 혜택과 신청 방법이 궁금하다면 <a href="https://coffeechat.kr/partnerVP" title="파트너 시작하기" class="faq-answer-link" target="_blank" rel="noreferrer"><b>여기</b></a>를 눌러주세요!</p>
                 `,
             },
         ],         
@@ -107,7 +107,7 @@ const faqData = [
             {
                 question: '사전 질문 작성은 필수인가요?',
                 answer: `
-                    <p>커피챗 파트너는 신청자의 사전 질문을 확인하고 커피챗을 수락하게 됩니다. 보다 생산적인 커피챗을 위해 질문은 최대한 구체적으로 작성해 주세요! <a href="/" title="질문 작성 팁 바로 가기" class="faq-answer-link"><b>질문 작성 팁 바로 가기</b></a></p>
+                    <p>커피챗 파트너는 신청자의 사전 질문을 확인하고 커피챗을 수락하게 됩니다. 보다 생산적인 커피챗을 위해 질문은 최대한 구체적으로 작성해 주세요! <a href="https://coffeechat.kr/asktips" title="질문 작성 팁 바로 가기" class="faq-answer-link" target="_blank" rel="noreferrer"><b>질문 작성 팁 바로 가기</b></a></p>
                 `,
             },
             {
@@ -285,7 +285,7 @@ const faqData = [
             {
                 question: '파트너가 되면 무엇이 좋은가요?',
                 answer: `
-                    <p>커피챗은 소중한 지식과 경험을 나누는 파트너가 지속적 수익을 창출할 수 있도록 합니다. 자세한 내용은 <a href="https://coffeechat.kr/partnerVP" title="파트너 서비스 소개" class="faq-answer-link"><b>파트너 서비스 소개</b></a>를 참고해 주세요! </p>
+                    <p>커피챗은 소중한 지식과 경험을 나누는 파트너가 지속적 수익을 창출할 수 있도록 합니다. 자세한 내용은 <a href="https://coffeechat.kr/partnerVP" title="파트너 서비스 소개" class="faq-answer-link" target="_blank" rel="noreferrer"><b>파트너 서비스 소개</b></a>를 참고해 주세요! </p>
                 `,
             },
             {

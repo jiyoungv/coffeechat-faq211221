@@ -8,7 +8,7 @@ const Hero = () => {
         <Heros>
             <Inners>
                 <div className="hero-link">
-                    <a href="/" title="커피챗 고객센터"><b>커피챗 고객센터</b></a>
+                    <a href="http://pf.kakao.com/_xjxcxbxfK" title="커피챗 고객센터" target="_blank" rel="noreferrer"><b>커피챗 고객센터</b></a>
                 </div>
                 <div className="hero-title">
                     <figure>
