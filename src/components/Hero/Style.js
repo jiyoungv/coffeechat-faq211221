@@ -5,7 +5,7 @@ const { mediaTablet, mediaMobile } = mediaQuery;
 const { brand500, slate700 } = colors;
 
 export const Heros = styled.section`
-    padding: 72px 0 20px;
+    padding: 72px 0 50px;
     background: #F5F7FD;
 
     .hero-link {
@@ -25,7 +25,7 @@ export const Heros = styled.section`
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: flex-end;
-        padding-top: 30px;
+        padding-top: 123px;
 
         h1 {
             margin-bottom: 10px;
@@ -34,27 +34,15 @@ export const Heros = styled.section`
         }
 
         figure {
-            max-width: 400px;
+            max-width: 255px;
         }
     }
 
     ${mediaTablet} {
-        .hero-title {
-            display: block;
-            padding-top: 14px;
-            text-align: center;
+        padding-bottom: 56px;
 
-            figure {
-                margin: 0 auto;
-            }
-        }
-    }
-
-    ${mediaMobile} {
-        padding-top: 48px;
-        
         .hero-link {
-            top: 4.5px;
+            top: 10px;
 
             a {
                 font-size: 12px;
@@ -63,16 +51,42 @@ export const Heros = styled.section`
 
         .hero-title {
             display: block;
-            padding-top: 4px;
+            padding-top: 56px;
             text-align: center;
 
             h1 {
-                margin-bottom: 0;
+                margin: 32px 0 0;
+                font-size: 24px;
             }
 
             figure {
-                max-width: 160px;
-                margin: 0 auto 2px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    ${mediaMobile} {
+        padding: 48px 0 32px;
+        
+        .hero-link {
+            a {
+                font-size: 12px;
+            }
+        }
+
+        .hero-title {
+            display: block;
+            padding-top: 26px;
+            text-align: center;
+
+            h1 {
+                margin: 10px 0 0;
+                font-size: 20px;
+            }
+
+            figure {
+                max-width: 140px;
+                margin: 0 auto;
             }
         }        
     }
