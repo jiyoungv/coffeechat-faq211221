@@ -209,10 +209,6 @@ export const Faqs = styled.section`
     ${mediaMobile} {
         margin-bottom: 50px;
 
-        .faq-content-list {
-            background: #F5F7FD;
-        }
-
         .faq-content-link {
             top: -48px;
         }

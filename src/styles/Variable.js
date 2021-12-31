@@ -6,6 +6,7 @@ export const fontFamily = {
 export const colors = {
     brand400: '#7687F5',
     brand500: '#5E67EB',
+    blue100: '#EEF3FB',    
     slate700: '#16263D',
     slate600: '#40577A',
     slate500: '#6F84A3',

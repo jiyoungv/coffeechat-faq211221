@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { mediaQuery, colors } from '../../styles/Variable';
 
 const { mediaTablet, mediaMobile } = mediaQuery;
-const { brand500, slate700 } = colors;
+const { brand500, blue100, slate700 } = colors;
 
 export const Heros = styled.section`
     padding: 72px 0 50px;
-    background: #F5F7FD;
+    background: ${blue100};
 
     .hero-link {
         z-index: 10;
