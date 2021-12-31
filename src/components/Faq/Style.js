@@ -194,10 +194,13 @@ export const Faqs = styled.section`
         .faq-depth2-question {
             padding-right: 24px;
             font-size: 14px;
-            color: ${brand400};
 
             &::after {
                 display: block;
+            }
+
+            &:hover {
+                color: ${midnight400};
             }
         }
 
@@ -235,11 +238,14 @@ export const Faqs = styled.section`
         .faq-depth2-question {
             padding-right: 24px;
             font-size: 14px;
-            color: ${brand400};
 
             &::after {
                 display: block;
             }
+
+            &:hover {
+                color: ${midnight400};
+            }            
         }
 
         .faq-depth2-answer {
